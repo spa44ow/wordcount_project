@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counted!!!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+<p><b>There are {{words}} words in your Sentence</b></p>
+<br>
+<a href="{% url 'home' %}">Start Over</a>
+<br>
+<h1>YOUR TEXT:</h1>
+
+{{wordlist}}
+
+
+
+<p style="text-align: center"><b>
+    {% for word , count in sortedword %}
+
+
+    {{word}}={{count}}
+
+    <br>
+
+    {% endfor %}
+</b>
+</p>
+</body>
+</html>
